@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: complete-prodcution-e2e-deployment
+  name: complete-prodcution-e2e-pipeline-deployment
 spec:
   selector:
     matchLabels:
-      app: complete-prodcution-e2e-app
+      app: complete-prodcution-e2e-pipeline
   template:
     metadata:
       labels:
-        app: complete-prodcution-e2e-app
+        app: complete-prodcution-e2e-pipeline
     spec:
       containers:
-        - name: complete-prodcution-e2e-app
+        - name: complete-prodcution-e2e-pipeline
           image: kaoutar421/complete-prodcution-e2e-pipeline:1.0.0-6
           resources:
             limits:
